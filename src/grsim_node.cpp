@@ -12,12 +12,12 @@
 #include <QtGui/QDialog>
 #include <QtNetwork>
 
-#include "grsim_comm/gr_BallReplacement.h"
-#include "grsim_comm/gr_Robot_Command.h"
-#include "grsim_comm/gr_RobotReplacement.h"
-#include "grsim_comm/gr_Packet.h"
-#include "grsim_comm/gr_Commands.h"
-#include "grsim_comm/gr_Replacement.h"
+#include "krssg_ssl_msgs/gr_BallReplacement.h"
+#include "krssg_ssl_msgs/gr_Robot_Command.h"
+#include "krssg_ssl_msgs/gr_RobotReplacement.h"
+#include "krssg_ssl_msgs/gr_Packet.h"
+#include "krssg_ssl_msgs/gr_Commands.h"
+#include "krssg_ssl_msgs/gr_Replacement.h"
 
 
 using namespace std;
@@ -26,7 +26,7 @@ QUdpSocket udpsocket;
 QHostAddress _addr = QHostAddress("127.0.0.1");
 quint16 _port = 20011;
 
-void Callback(const grsim_comm::gr_Commands::ConstPtr& msg)
+void Callback(const krssg_ssl_msgs::gr_Commands::ConstPtr& msg)
 {
 		grSim_Packet packet;
 		packet.mutable_commands()->set_isteamyellow(msg->isteamyellow);

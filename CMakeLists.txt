@@ -9,10 +9,11 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  krssg_ssl_msgs
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+#find_package(Boost REQUIRED COMPONENTS system)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -45,15 +46,15 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-   FILES
-   gr_Commands.msg
-   gr_Packet.msg
-   gr_Replacement.msg
-   gr_RobotReplacement.msg
-   gr_Robot_Command.msg
-   gr_BallReplacement.msg
-)
+##add_message_files(
+##   FILES
+##   gr_Commands.msg
+##   gr_Packet.msg
+##   gr_Replacement.msg
+##   gr_RobotReplacement.msg
+##   gr_Robot_Command.msg
+##   gr_BallReplacement.msg
+#)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -87,7 +88,7 @@ add_message_files(
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ssl_communication
-  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs krssg_ssl_msgs
   DEPENDS system_lib
 )
 
