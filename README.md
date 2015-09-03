@@ -7,6 +7,7 @@ This package subscribes to /grsim_data and converts it into GRSIm Protobuf forma
 **Dependencies:** GrSim
 
 1. Clone the repository [grSim](https://github.com/mani-monaj/grSim) and follow the instructions in it's [Install](https://github.com/mani-monaj/grSim/blob/master/INSTALL.md) file.
+2. Clone the repository [krssg_ssl_msgs](https://github.com/KRSSG/krssg_ssl_msgs) in the catkin workspace.
 2. Clone this repository in your catkin workspace.
 3. Run ```catkin_make``` in workspace root.
 4. Run 
