@@ -204,10 +204,14 @@ target_link_libraries(test_ssl ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LI
 add_dependencies(test_ssl grsim_comm_generate_messages_cpp)
 
 
-add_executable(grsim_node src/grsim_node.cpp ${PROTO_CPP} ${PROTO_H})
-target_link_libraries(grsim_node ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
-add_dependencies(grsim_node grsim_comm_generate_messages_cpp)
+add_executable(grsim_xyw_node src/grsim_xyw_node.cpp ${PROTO_CPP} ${PROTO_H})
+target_link_libraries(grsim_xyw_node ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
+add_dependencies(grsim_xyw_node grsim_comm_generate_messages_cpp)
 
+
+add_executable(grsim_wheelspeed_node src/grsim_wheelspeed_node.cpp ${PROTO_CPP} ${PROTO_H})
+target_link_libraries(grsim_wheelspeed_node ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
+add_dependencies(grsim_wheelspeed_node grsim_comm_generate_messages_cpp)
 ###############################	For client server services #########################################
 
 #add_executable(add_two_ints_server src/add_two_ints_server.cpp)

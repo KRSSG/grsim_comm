@@ -39,11 +39,7 @@ void Callback(const krssg_ssl_msgs::gr_Commands::ConstPtr& msg)
 		command->set_velnormal(msg->robot_commands.velnormal);
 		command->set_velangular(msg->robot_commands.velangular);
 		command->set_spinner(msg->robot_commands.spinner);
-		command->set_wheelsspeed(msg->robot_commands.wheelsspeed);
-		command->set_wheel1(msg->robot_commands.wheel1);
-		command->set_wheel2(msg->robot_commands.wheel2);
-		command->set_wheel3(msg->robot_commands.wheel3);
-		command->set_wheel4(msg->robot_commands.wheel4);
+		command->set_wheelsspeed(0);
 		QByteArray dgram;
 		dgram.resize(packet.ByteSize());
 		packet.SerializeToArray(dgram.data(), dgram.size());

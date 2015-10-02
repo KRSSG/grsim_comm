@@ -35,15 +35,11 @@ int main(int argc, char **argv)
 		msg.id = 1;
 		msg.kickspeedx = 1;
 		msg.kickspeedz = 2;
-		msg.veltangent = 2;
-		msg.velnormal  = 2;
-		msg.velangular = 6;
+		msg.veltangent = 0;
+		msg.velnormal  = 0;
+		msg.velangular = 3;
 		msg.spinner = 0;
 		msg.wheelsspeed = 0;
-		msg.wheel1 = 0;
-		msg.wheel2 = 0;
-		msg.wheel3 = 0;
-		msg.wheel4 = 0;
 		
 		krssg_ssl_msgs::gr_Commands command;
 		command.robot_commands = msg;
