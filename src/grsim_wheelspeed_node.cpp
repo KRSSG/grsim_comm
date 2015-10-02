@@ -49,7 +49,7 @@ void Callback(const krssg_ssl_msgs::gr_Commands::ConstPtr& msg)
     vy=msg->robot_commands.velnormal;
     vw = msg->robot_commands.velangular;
     const double BOT_RAD = 0.09;
-    const double fac = 1/0.027; // 1/wheel_radius
+    const double fac = 1/0.025; // 1/wheel_radius
     for (int i = 0; i < 4; ++i)
     { 
       a[i]=-sin(arr[i])*vx+cos(arr[i])*vy+vw*BOT_RAD;
