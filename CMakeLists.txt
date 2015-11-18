@@ -189,6 +189,7 @@ protobuf_generate_cpp(PROTO_CPP PROTO_H
     include/proto/grSim_Replacement.proto
     include/proto/grSim_Commands.proto
     include/proto/grSim_Packet.proto
+    include/proto/sslDebug_Data.proto
 )
 
 #Including proto files
@@ -212,6 +213,10 @@ add_dependencies(grsim_xyw_node grsim_comm_generate_messages_cpp)
 add_executable(grsim_wheelspeed_node src/grsim_wheelspeed_node.cpp ${PROTO_CPP} ${PROTO_H})
 target_link_libraries(grsim_wheelspeed_node ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
 add_dependencies(grsim_wheelspeed_node grsim_comm_generate_messages_cpp)
+
+add_executable(debug_test src/debug_test.cpp ${PROTO_CPP} ${PROTO_H})
+target_link_libraries(debug_test ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
+add_dependencies(debug_test grsim_comm_generate_messages_cpp)
 ###############################	For client server services #########################################
 
 #add_executable(add_two_ints_server src/add_two_ints_server.cpp)
