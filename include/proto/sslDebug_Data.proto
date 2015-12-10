@@ -10,7 +10,7 @@ message Debug_Circle {
   required int32 x=1;
   required int32 y=2;
   required int32 radius=3;
-  required uint32 color=4;
+  required float color=4;
 }
 
 message Debug_Line {
@@ -18,7 +18,7 @@ message Debug_Line {
   required int32 y1=2;
   required int32 x2=3;
   required int32 y2=4;
-  required uint32 color=5;
+  required float color=5;
 }
 
 message Debug_AdjustBot {
